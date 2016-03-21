@@ -13,7 +13,10 @@ label {
 	padding: 5px;
 }
 fieldset {
-	span {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	span:not(.note) {
 		width: 50%;
 		text-align: right;
 		padding: 0 1rem 0 0;
@@ -21,13 +24,15 @@ fieldset {
 	fieldset {
 		label {
 			justify-content: flex-end;
-			span {
+			span:not(.note) {
 				text-align: left;
 				padding: 0 0 0 1rem;
 			}
 		}
 	}
 }
+a.fa {text-decoration: none;}
+.note {color: #777;}
 button,
 input:not([type="checkbox"]):not([type="radio"]),
 select,
@@ -36,7 +41,6 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
 select,
 textarea {
     border: 1px solid #ccc;
-    color: #0a0a0a;	
     line-height: normal;
     padding: 0.25rem 0.5rem;
     .required & {
@@ -65,7 +69,7 @@ select {
     background-size: 9px 6px;
 }
 label.required {
-	span {font-weight: bold;
+	span:not(.note) {font-weight: bold;
 		&:after {content: " *";}
 	}
 }
