@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<title>Forms Complete Example</title>
+		<link rel="stylesheet" href="https://necolas.github.io/normalize.css/4.0.0/normalize.css" />
+		<link rel="stylesheet" href="css/form.css" />
+	</head>
+<body>
+	<form>
+		<fieldset>
+			<legend>Personal details</legend>
+			<label class="required">
+				<span>First Name</span>
+				<input id="given-name" name="first-name" type="text" placeholder="First name only" required />
+			</label>	
+			<label>
+				<span>Last Name</span>
+				<input id="family-name" name="last-name" type="text" />
+			</label>
+			<label>
+				<span>Date of Birth</span>
+				<input id="dob" name="dob" type="date" />
+			</label>
+			<label>
+				<span>Email</span>
+				<input id="email" name="email" type="email" />
+			</label>
+			<label>
+				<span>URL</span>
+				<input id="url" name="url" type="url" />
+			</label>
+			<label>
+				<span>Telephone</span>
+				<input id="phone" name="phone" type="tel" />
+			</label>
+			<label>
+				<span>Shoe size</span>
+				<input id="shoes" name="shoes" type="number" min="5" max="18" step="0.5" value="9">
+			</label>
+			<label>
+				<span>Flying Skill level (1 low - 100 high)</span>
+				<input id="skill" name="skill" type="range" min="1" max="100" value="0" />
+				<output name="output" onforminput="value=a.value">0</output>
+			</label>
+		</fieldset>
+		<fieldset>
+			<legend>Billing address</legend>
+			<label><span>Address</span>
+				<textarea id="address" name="address" rows=5></textarea>
+			</label>
+			<label><span>Post code</span>
+				<input id="postCode" name="postCode" type="text" />
+			</label>
+			<label>
+				<span>Country</span>
+				<input id="country" name="country" list="country-names" type="text" />
+				<datalist id="country-names">
+					<option label="England" value="England"></option>
+					<option label="Northern Ireland" value="Northern Ireland"></option>
+					<option label="Ireland" value="Ireland"></option>
+					<option label="Scotland" value="Scotland"></option>
+					<option label="Wales" value="Wales"></option>
+				</datalist>
+			</label>
+			<label>
+				<span>Country</span>
+				<select id="country-names-select">
+					<option value="England">England</option>
+					<option value="Northern Ireland">Northern Ireland</option>
+					<option value="Ireland">Ireland</option>
+					<option value="Scotland">Scotland</option>
+					<option value="Wales">Wales</option>
+				</select>
+			</label>
+		</fieldset>
+		<fieldset>
+			<legend>Newsletters</legend>
+			<fieldset>
+				<legend>Select from below</legend>
+				<label>
+					<input id="daily" name="subscription" type="checkbox" />
+					<span>Daily News</span>
+				</label>
+				<label>
+					<input id="weekly" name="subscription" type="checkbox" />
+					<span>Weekly Gossip</span>
+				</label>
+				<label>
+					<input id="monthly" name="subscription" type="checkbox" />
+					<span>Monthly Archive</span>
+				</label>
+			</fieldset>
+		</fieldset>
+		<fieldset>
+			<legend>Card details</legend>
+			<fieldset>
+				<legend>Card type</legend>
+				<label>
+					<input id="visa" name="cardtype" type="radio" />
+					<span>VISA</span>
+				</label>
+				<label>
+					<input id="mastercard" name="cardtype" type="radio" />
+					<span>Mastercard</span>
+				</label>
+				<label>
+					<input id="amex" name="cardtype" type="radio" />
+					<span>AMEX</span>
+				</label>
+			</fieldset>
+			<label>
+				<span>Name</span>
+				<input id="cardName" name="cardName" type="text" />
+			</label>
+			<label>
+				<span>Card number</span>
+				<input id="cardNo" name="cardNo" type="number" title="The sixteen digit number across the middle of your card." />
+			</label>
+			<label>
+				<span>Security code</span>
+				<input id="security" name="security" type="number" pattern="[0-9]{3}" title="The last three digits on the back of your card." />
+			</label>
+			<label>
+				<span>Expiry Date</span>
+				<input id="expiry" name="expiry" type="month" />
+			</label>
+		</fieldset>
+		<fieldset>
+			<button type="submit">Place Order</button>
+		</fieldset>
+	</form>
+</body>
+</html>
